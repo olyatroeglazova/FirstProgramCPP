@@ -15,8 +15,8 @@ public:
 	DynamicArray();
 	DynamicArray(const int);
 	DynamicArray(const int, const int);
-	DynamicArray(const DynamicArray &arr);
-	DynamicArray( DynamicArray &&arr);
+	DynamicArray(const DynamicArray&);
+	DynamicArray(DynamicArray&&);
 	~DynamicArray();
 
 	int length();
@@ -25,13 +25,13 @@ public:
 	int& operator[](const int);
 	DynamicArray& operator=(const DynamicArray&);
 	DynamicArray& operator=(DynamicArray&&);
-	bool operator==(const DynamicArray &other) const;
-	bool operator!=(const DynamicArray &other) const;
-	bool operator<(const DynamicArray &other) const;
-	bool operator>(const DynamicArray &other) const;
-	bool operator<=(const DynamicArray &other) const;
-	bool operator>=(const DynamicArray &other) const;
-	DynamicArray operator+(const DynamicArray &other);
+	bool operator==(const DynamicArray&) const;
+	bool operator!=(const DynamicArray&) const;
+	bool operator<(const DynamicArray&) const;
+	bool operator>(const DynamicArray&) const;
+	bool operator<=(const DynamicArray&) const;
+	bool operator>=(const DynamicArray&) const;
+	DynamicArray operator+(const DynamicArray&);
 	friend std::ostream& operator<<(std::ostream&, const DynamicArray&);
 	friend std::istream& operator>>(std::istream&, DynamicArray&);
 
